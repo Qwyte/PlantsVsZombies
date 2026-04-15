@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date             : Tue Apr 14 18:06:38 2026
+| Date             : Wed Apr 15 14:24:39 2026
 | Host             : LAPTOP-07QTASJP running 64-bit major release  (build 9200)
 | Command          : report_power -file gameTop_power_routed.rpt -pb gameTop_power_summary_routed.pb -rpx gameTop_power_routed.rpx
 | Design           : gameTop
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.239        |
+| Total On-Chip Power (W)  | 0.238        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 0.140        |
@@ -53,20 +53,20 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.003 |        6 |       --- |             --- |
-| Slice Logic              |     0.005 |     1645 |       --- |             --- |
-|   LUT as Logic           |     0.005 |      885 |     63400 |            1.40 |
-|   Register               |    <0.001 |      436 |    126800 |            0.34 |
+| Slice Logic              |     0.005 |     2129 |       --- |             --- |
+|   LUT as Logic           |     0.004 |     1260 |     63400 |            1.99 |
+|   Register               |    <0.001 |      473 |    126800 |            0.37 |
+|   LUT as Distributed RAM |    <0.001 |        4 |     19000 |            0.02 |
 |   CARRY4                 |    <0.001 |       36 |     15850 |            0.23 |
-|   LUT as Distributed RAM |    <0.001 |        8 |     19000 |            0.04 |
-|   F7/F8 Muxes            |    <0.001 |        2 |     63400 |           <0.01 |
+|   F7/F8 Muxes            |    <0.001 |        7 |     63400 |            0.01 |
 |   Others                 |     0.000 |       62 |       --- |             --- |
 |   BUFG                   |     0.000 |        1 |        32 |            3.13 |
-| Signals                  |     0.006 |     1220 |       --- |             --- |
+| Signals                  |     0.005 |     1681 |       --- |             --- |
 | Block RAM                |     0.017 |     17.5 |       135 |           12.96 |
 | MMCM                     |     0.101 |        1 |         6 |           16.67 |
 | I/O                      |     0.009 |       24 |       210 |           11.43 |
 | Static Power             |     0.098 |          |           |                 |
-| Total                    |     0.239 |          |           |                 |
+| Total                    |     0.238 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.045 |       0.029 |      0.016 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.044 |       0.029 |      0.016 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.075 |       0.056 |      0.018 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.006 |       0.002 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -156,11 +156,13 @@ Table of Contents
 |       U0                   |     0.001 |
 |     peaShooterRomBlock     |     0.005 |
 |       U0                   |     0.005 |
+|     sunflowerMaskRomBlock  |     0.001 |
+|       U0                   |     0.001 |
 |     sunflowerRomBlock      |     0.005 |
 |       U0                   |     0.005 |
 |   myClock                  |     0.101 |
 |     inst                   |     0.101 |
-|   nolabel_line203          |     0.006 |
+|   nolabel_line203          |     0.005 |
 |   vga_out                  |     0.004 |
 +----------------------------+-----------+
 

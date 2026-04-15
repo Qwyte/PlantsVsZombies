@@ -34,7 +34,14 @@ module zombie_module(
     output reg zombie_en,
     output reg LED_2
     );
-    
+parameter offsetFromHouse = 100;
+parameter height = 900;
+parameter width = 1440;
+parameter widthOfGrid = 9; //9 blocks wide
+parameter heightOfGrid = 5; // 5 blocks tall
+reg [3:0] gridXValue;
+reg [3:0] gridYValue;
+reg inGrid = 0;
     reg [3:0] gridRegister [0:45];
     
     parameter Z_LIMIT=4'd4;
@@ -90,9 +97,9 @@ module zombie_module(
     
     reg [10:0] zomb_pos_x_temp;
     reg [10:0] zomb_pos_y_temp;
-    wire [5:0] zomb_grid_addr;
-    calculateAddress zomb_grid_addr_module (
-    .pixelX(zomb_pos_x_temp), .pixelY(zomb_pos_y_temp), .gridPosition(zomb_grid_addr));
+    reg [5:0] zomb_grid_addr;
+    //calculateAddress zomb_grid_addr_module (
+    //.pixelX(zomb_pos_x_temp), .pixelY(zomb_pos_y_temp), .gridPosition(zomb_grid_addr));
     ////////////////////////////////// UPDATE POSITION
     always @(posedge clk_60) 
     begin
@@ -103,8 +110,24 @@ module zombie_module(
             for (i=0; i<Z_LIMIT; i=i+1)
                 begin
                     rotate_index[y][i] <= 4'd0;
-                    zomb_pos_x_temp <= zomb_pos_x[y][i]-11'd33;
-                    zomb_pos_y_temp <= (y*128)+offsetVertical;
+                    zomb_pos_x_temp = zomb_pos_x[y][i]-11'd33;
+                    zomb_pos_y_temp = (y*128)+offsetVertical;
+                    inGrid = 0;
+                    gridXValue = 0;
+                    gridYValue = 0;
+                        if ((zomb_pos_x_temp >= offsetFromHouse) && (zomb_pos_y_temp >= offsetVertical) && (zomb_pos_y_temp <= (height - offsetVertical)))
+                        begin
+                            inGrid = 1;
+                            gridXValue = ((zomb_pos_x_temp - offsetFromHouse)>> 7) + 1; //offset so gridPosition = 0 only if not in grid
+                                if (gridXValue > widthOfGrid)
+                                inGrid = 0;
+                            gridYValue = (zomb_pos_y_temp-offsetVertical) >> 7;
+                        end
+                        else
+                            inGrid = 0;
+                   
+                    
+                    zomb_grid_addr = gridYValue*widthOfGrid + gridXValue;
                     if(zomb_pos_x[y][i] > 11'd128 && gridRegister[zomb_grid_addr]<2)begin
                         zomb_pos_x[y][i] <= zomb_pos_x[y][i] - 11'd1;
                         zomb_cnt[y] <=i+1;
