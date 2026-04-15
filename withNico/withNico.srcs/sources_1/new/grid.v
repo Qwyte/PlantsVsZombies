@@ -44,6 +44,8 @@ wire [10:0] offsetY = (currentY >= offsetVertical) ? currentY - offsetVertical:0
 //address is just offsetY times 128 (number of pixels in a row) + offsetX which is conveniently offsetY << 7 truncated with offsetX's first 7 bits
 //Note only first 7 bits matter because you are rezeroing to a 128 by 128 grid (size of a square in the game grid and size of a sprite)
 wire [13:0] address = {offsetY[6:0], offsetX[6:0]}; 
+
+
 assign gridEnable = (gridPosition != 0) ? 1:0;
 always@(posedge clk)
 begin

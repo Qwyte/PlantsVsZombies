@@ -94,6 +94,17 @@ begin
     end
 end
 
+reg buttonSync0, buttonSync1, prevButton;
+
+always @(posedge clk) 
+begin
+    buttonSync0 <= button[0];
+    buttonSync1 <= buttonSync0;
+    prevButton <= buttonSync1;
+end
+
+wire risingButton = buttonSync1 & buttonSync0;
+
     
 // Cursor logic:
 always @(posedge gameClk)
@@ -102,12 +113,11 @@ always @(posedge gameClk)
 //button selecting and placing plants
 always @(posedge gameClk)
 begin
-prevButton <= button[0];
 updatePlant<=0;
 updateAddr<=0;
     if (!startMenu) // only works when not in the start menu
     begin
-        if (button[0] && !prevButton) // make sure it's not permanently clicking
+        if (risingButton)
         begin
             if(safeIndex != 0 && selectedPlant > 0 && gridRegister[cursorGridPosition][3:1] == 3'd0) 
             //means you are in an empty spot of the grid and you have a plant selected (bits 1 2 3 are 0)
