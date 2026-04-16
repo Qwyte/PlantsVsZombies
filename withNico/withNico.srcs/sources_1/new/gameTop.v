@@ -22,8 +22,8 @@ wire [10:0] currentY;
 //    (currentX < cursorPositionX + cursorSizeX) &&
 //    (currentY >= cursorPositionY) &&
 //    (currentY < cursorPositionY + cursorSizeY);
-reg [10:0] cursorPositionX = 10'd100; //initial location of the cursor
-reg [10:0] cursorPositionY = 10'd100;
+reg [10:0] cursorPositionX = 10'd450; //initial location of the cursor
+reg [10:0] cursorPositionY = 10'd720;
 parameter cursorSizeX = 8;
 parameter cursorSizeY = 8;
 //X limits for Pea and Sun seeds in tool bar
@@ -66,9 +66,8 @@ wire [5:0] cursorGridPosition; //Where in the grid is the cursor, if not in grid
 //clkDiv value initialisation and gameClk initialisation
 reg [20:0] clkDiv;
 reg gameClk;
-//stabilising cursor and button presses (button only recognised as being pressed when it was pressed but isn't anymore
-// (so it isn't registered as being pressed for every clock cycle wherein you are pressing it
-reg prevButton = 0;
+
+
 reg [5:0] stableCursorGridPosition;
 //calculates the content of the gridPosition square
 assign gridContent = gridRegister[safeIndex];

@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Wed Apr 15 17:16:50 2026
-# Process ID: 110472
+# Start of session at: Thu Apr 16 15:26:05 2026
+# Process ID: 91864
 # Current directory: C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.runs/synth_1
 # Command line: vivado.exe -log gameTop.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source gameTop.tcl
 # Log file: C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.runs/synth_1/gameTop.vds
@@ -19,10 +19,10 @@
 # Host memory       :8155 MB
 # Swap memory       :24693 MB
 # Total Virtual     :32849 MB
-# Available Virtual :13404 MB
+# Available Virtual :12852 MB
 #-----------------------------------------------------------
 source gameTop.tcl -notrace
-create_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 513.316 ; gain = 201.465
+create_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 513.039 ; gain = 201.387
 Command: read_checkpoint -auto_incremental -incremental C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/utils_1/imports/synth_1/gameTop.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/utils_1/imports/synth_1/gameTop.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -36,24 +36,23 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 109340
+INFO: [Synth 8-7075] Helper process launched with PID 118248
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1396.844 ; gain = 448.941
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1396.980 ; gain = 449.539
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-11241] undeclared symbol 'pixelClk', assumed default net type 'wire' [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/gameTop.v:79]
-WARNING: [Synth 8-10929] literal value 'd1666666 truncated to fit in 20 bits [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/gameTop.v:86]
-CRITICAL WARNING: [Synth 8-9339] data object 'prevButton' is already declared [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/gameTop.v:97]
-INFO: [Synth 8-6826] previous declaration of 'prevButton' is from here [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/gameTop.v:71]
-CRITICAL WARNING: [Synth 8-11152] second declaration of 'prevButton' is ignored [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/gameTop.v:97]
-INFO: [Synth 8-11241] undeclared symbol 'validDisplay', assumed default net type 'wire' [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/gameTop.v:264]
-INFO: [Synth 8-11241] undeclared symbol 'validRange', assumed default net type 'wire' [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/gameTop.v:284]
-WARNING: [Synth 8-6901] identifier 'updatePlant' is used before its declaration [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/gameTop.v:116]
-WARNING: [Synth 8-6901] identifier 'updateAddr' is used before its declaration [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/gameTop.v:117]
-WARNING: [Synth 8-6901] identifier 'updateAddr' is used before its declaration [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/gameTop.v:126]
-WARNING: [Synth 8-6901] identifier 'updatePlant' is used before its declaration [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/gameTop.v:127]
+WARNING: [Synth 8-6901] identifier 'numberRom' is used before its declaration [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/toolBar.v:54]
+WARNING: [Synth 8-6901] identifier 'column' is used before its declaration [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/toolBar.v:54]
+INFO: [Synth 8-11241] undeclared symbol 'pixelClk', assumed default net type 'wire' [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/gameTop.v:78]
+WARNING: [Synth 8-10929] literal value 'd1666666 truncated to fit in 20 bits [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/gameTop.v:85]
+INFO: [Synth 8-11241] undeclared symbol 'validDisplay', assumed default net type 'wire' [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/gameTop.v:263]
+INFO: [Synth 8-11241] undeclared symbol 'validRange', assumed default net type 'wire' [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/gameTop.v:283]
+WARNING: [Synth 8-6901] identifier 'updatePlant' is used before its declaration [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/gameTop.v:115]
+WARNING: [Synth 8-6901] identifier 'updateAddr' is used before its declaration [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/gameTop.v:116]
+WARNING: [Synth 8-6901] identifier 'updateAddr' is used before its declaration [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/gameTop.v:125]
+WARNING: [Synth 8-6901] identifier 'updatePlant' is used before its declaration [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/gameTop.v:126]
 INFO: [Synth 8-6157] synthesizing module 'gameTop' [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/gameTop.v:3]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.runs/synth_1/.Xil/Vivado-110472-LAPTOP-07QTASJP/realtime/clk_wiz_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.runs/synth_1/.Xil/Vivado-110472-LAPTOP-07QTASJP/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.runs/synth_1/.Xil/Vivado-91864-LAPTOP-07QTASJP/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.runs/synth_1/.Xil/Vivado-91864-LAPTOP-07QTASJP/realtime/clk_wiz_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'zombie_module' [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/zombie_module.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'zombie_module' (0#1) [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/zombie_module.v:23]
 INFO: [Synth 8-6157] synthesizing module 'cursor' [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/cursor.v:23]
@@ -61,16 +60,16 @@ INFO: [Synth 8-6155] done synthesizing module 'cursor' (0#1) [C:/Users/camer/Doc
 INFO: [Synth 8-6157] synthesizing module 'toolBar' [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/toolBar.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'toolBar' (0#1) [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/toolBar.v:23]
 INFO: [Synth 8-6157] synthesizing module 'grid' [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/grid.v:23]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.runs/synth_1/.Xil/Vivado-110472-LAPTOP-07QTASJP/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (0#1) [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.runs/synth_1/.Xil/Vivado-110472-LAPTOP-07QTASJP/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_2' [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.runs/synth_1/.Xil/Vivado-110472-LAPTOP-07QTASJP/realtime/blk_mem_gen_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_2' (0#1) [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.runs/synth_1/.Xil/Vivado-110472-LAPTOP-07QTASJP/realtime/blk_mem_gen_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.runs/synth_1/.Xil/Vivado-110472-LAPTOP-07QTASJP/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (0#1) [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.runs/synth_1/.Xil/Vivado-110472-LAPTOP-07QTASJP/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_3' [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.runs/synth_1/.Xil/Vivado-110472-LAPTOP-07QTASJP/realtime/blk_mem_gen_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_3' (0#1) [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.runs/synth_1/.Xil/Vivado-110472-LAPTOP-07QTASJP/realtime/blk_mem_gen_3_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_4' [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.runs/synth_1/.Xil/Vivado-110472-LAPTOP-07QTASJP/realtime/blk_mem_gen_4_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_4' (0#1) [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.runs/synth_1/.Xil/Vivado-110472-LAPTOP-07QTASJP/realtime/blk_mem_gen_4_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.runs/synth_1/.Xil/Vivado-91864-LAPTOP-07QTASJP/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (0#1) [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.runs/synth_1/.Xil/Vivado-91864-LAPTOP-07QTASJP/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_2' [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.runs/synth_1/.Xil/Vivado-91864-LAPTOP-07QTASJP/realtime/blk_mem_gen_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_2' (0#1) [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.runs/synth_1/.Xil/Vivado-91864-LAPTOP-07QTASJP/realtime/blk_mem_gen_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.runs/synth_1/.Xil/Vivado-91864-LAPTOP-07QTASJP/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (0#1) [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.runs/synth_1/.Xil/Vivado-91864-LAPTOP-07QTASJP/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_3' [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.runs/synth_1/.Xil/Vivado-91864-LAPTOP-07QTASJP/realtime/blk_mem_gen_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_3' (0#1) [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.runs/synth_1/.Xil/Vivado-91864-LAPTOP-07QTASJP/realtime/blk_mem_gen_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_4' [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.runs/synth_1/.Xil/Vivado-91864-LAPTOP-07QTASJP/realtime/blk_mem_gen_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_4' (0#1) [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.runs/synth_1/.Xil/Vivado-91864-LAPTOP-07QTASJP/realtime/blk_mem_gen_4_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'grid' (0#1) [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/grid.v:23]
 INFO: [Synth 8-6157] synthesizing module 'newDrawCon' [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/newDrawCon.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'newDrawCon' (0#1) [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/newDrawCon.v:23]
@@ -94,25 +93,25 @@ WARNING: [Synth 8-3848] Net zomb_cnt[5] in module/entity zombie_module does not 
 WARNING: [Synth 8-6014] Unused sequential element green_reg was removed.  [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/cursor.v:42]
 WARNING: [Synth 8-6014] Unused sequential element blue_reg was removed.  [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/cursor.v:43]
 WARNING: [Synth 8-3848] Net squareEnable in module/entity toolBar does not have driver. [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/toolBar.v:27]
-WARNING: [Synth 8-6014] Unused sequential element prevButton_reg was removed.  [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/gameTop.v:103]
-WARNING: [Synth 8-6014] Unused sequential element stableCursorGridPosition_reg was removed.  [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/gameTop.v:111]
-WARNING: [Synth 8-6014] Unused sequential element LED_0_reg was removed.  [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/gameTop.v:197]
-WARNING: [Synth 8-3848] Net validDisplay in module/entity gameTop does not have driver. [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/gameTop.v:264]
+WARNING: [Synth 8-6014] Unused sequential element prevButton_reg was removed.  [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/gameTop.v:102]
+WARNING: [Synth 8-6014] Unused sequential element stableCursorGridPosition_reg was removed.  [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/gameTop.v:110]
+WARNING: [Synth 8-6014] Unused sequential element LED_0_reg was removed.  [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/gameTop.v:196]
+WARNING: [Synth 8-3848] Net validDisplay in module/entity gameTop does not have driver. [C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/gameTop.v:263]
 WARNING: [Synth 8-7129] Port validDisplay in module newDrawCon is either unconnected or has no load
 WARNING: [Synth 8-7129] Port squareEnable in module toolBar is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1566.418 ; gain = 618.516
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1568.082 ; gain = 620.641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1566.418 ; gain = 618.516
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1568.082 ; gain = 620.641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1566.418 ; gain = 618.516
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1568.082 ; gain = 620.641
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.200 . Memory (MB): peak = 1566.418 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.115 . Memory (MB): peak = 1568.082 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -135,11 +134,11 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/gameTop_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1661.238 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1665.172 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 1661.238 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1665.172 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'grid/grassRomBlock' at clock pin 'clka' is different from the actual clock period '9.392', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'grid/peaShooterMaskRomBlock' at clock pin 'clka' is different from the actual clock period '9.392', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'grid/peaShooterRomBlock' at clock pin 'clka' is different from the actual clock period '9.392', this can lead to different synthesis results.
@@ -148,14 +147,14 @@ WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context s
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1661.238 ; gain = 713.336
+Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1665.172 ; gain = 717.730
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1661.238 ; gain = 713.336
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1665.172 ; gain = 717.730
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -169,25 +168,26 @@ Applied set_property KEEP_HIERARCHY = SOFT for grid/peaShooterRomBlock. (constra
 Applied set_property KEEP_HIERARCHY = SOFT for grid/sunflowerMaskRomBlock. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for grid/sunflowerRomBlock. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1661.238 ; gain = 713.336
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1665.172 ; gain = 717.730
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:48 ; elapsed = 00:00:52 . Memory (MB): peak = 1661.238 ; gain = 713.336
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:34 ; elapsed = 00:00:38 . Memory (MB): peak = 1665.172 ; gain = 717.730
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   32 Bit       Adders := 22    
+	   2 Input   32 Bit       Adders := 23    
 	   2 Input   21 Bit       Adders := 1     
 	   2 Input   12 Bit       Adders := 6     
-	   2 Input   11 Bit       Adders := 49    
+	   2 Input   11 Bit       Adders := 50    
 	   3 Input   11 Bit       Adders := 5     
 	   2 Input   10 Bit       Adders := 9     
 	   2 Input    7 Bit       Adders := 2     
 	   2 Input    5 Bit       Adders := 41    
-	   2 Input    4 Bit       Adders := 27    
+	   2 Input    4 Bit       Adders := 28    
+	   3 Input    3 Bit       Adders := 2     
 +---Registers : 
 	               21 Bit    Registers := 1     
 	               11 Bit    Registers := 34    
@@ -201,16 +201,18 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input   11 Bit        Muxes := 301   
 	   2 Input   10 Bit        Muxes := 1     
+	  14 Input    8 Bit        Muxes := 5     
+	  14 Input    7 Bit        Muxes := 3     
 	   2 Input    7 Bit        Muxes := 2     
 	   2 Input    6 Bit        Muxes := 5     
 	   2 Input    5 Bit        Muxes := 2     
-	   2 Input    4 Bit        Muxes := 76    
+	   2 Input    4 Bit        Muxes := 77    
 	   4 Input    4 Bit        Muxes := 3     
 	   6 Input    4 Bit        Muxes := 1     
 	   6 Input    3 Bit        Muxes := 1     
-	   2 Input    3 Bit        Muxes := 5     
+	   2 Input    3 Bit        Muxes := 6     
 	   2 Input    2 Bit        Muxes := 9     
-	   2 Input    1 Bit        Muxes := 403   
+	   2 Input    1 Bit        Muxes := 401   
 	   6 Input    1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -228,8 +230,10 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port validDisplay in module newDrawCon is either unconnected or has no load
+WARNING: [Synth 8-7129] Port squareEnable in module toolBar is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:29 ; elapsed = 00:02:38 . Memory (MB): peak = 1679.801 ; gain = 731.898
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:11 ; elapsed = 00:01:16 . Memory (MB): peak = 1676.512 ; gain = 729.070
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -250,13 +254,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:55 ; elapsed = 00:03:05 . Memory (MB): peak = 1679.801 ; gain = 731.898
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:20 ; elapsed = 00:01:25 . Memory (MB): peak = 1677.566 ; gain = 730.125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:03:02 ; elapsed = 00:03:11 . Memory (MB): peak = 1681.797 ; gain = 733.895
+Finished Timing Optimization : Time (s): cpu = 00:01:24 ; elapsed = 00:01:29 . Memory (MB): peak = 1683.082 ; gain = 735.641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -276,7 +280,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:03:05 ; elapsed = 00:03:15 . Memory (MB): peak = 1691.320 ; gain = 743.418
+Finished Technology Mapping : Time (s): cpu = 00:01:25 ; elapsed = 00:01:30 . Memory (MB): peak = 1692.832 ; gain = 745.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -294,37 +298,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:03:28 ; elapsed = 00:03:38 . Memory (MB): peak = 1691.320 ; gain = 743.418
+Finished IO Insertion : Time (s): cpu = 00:01:33 ; elapsed = 00:01:38 . Memory (MB): peak = 1692.832 ; gain = 745.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:03:28 ; elapsed = 00:03:38 . Memory (MB): peak = 1691.320 ; gain = 743.418
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:33 ; elapsed = 00:01:38 . Memory (MB): peak = 1692.832 ; gain = 745.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:28 ; elapsed = 00:03:39 . Memory (MB): peak = 1691.320 ; gain = 743.418
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:33 ; elapsed = 00:01:38 . Memory (MB): peak = 1692.832 ; gain = 745.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:03:28 ; elapsed = 00:03:39 . Memory (MB): peak = 1691.320 ; gain = 743.418
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:33 ; elapsed = 00:01:38 . Memory (MB): peak = 1692.832 ; gain = 745.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:03:29 ; elapsed = 00:03:39 . Memory (MB): peak = 1691.320 ; gain = 743.418
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:33 ; elapsed = 00:01:38 . Memory (MB): peak = 1692.832 ; gain = 745.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:03:29 ; elapsed = 00:03:39 . Memory (MB): peak = 1691.320 ; gain = 743.418
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:33 ; elapsed = 00:01:38 . Memory (MB): peak = 1692.832 ; gain = 745.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -351,45 +355,44 @@ Report Cell Usage:
 |7     |BUFG        |     1|
 |8     |CARRY4      |    36|
 |9     |LUT1        |    12|
-|10    |LUT2        |   167|
-|11    |LUT3        |   145|
-|12    |LUT4        |   205|
-|13    |LUT5        |   271|
-|14    |LUT6        |   687|
-|15    |MUXF7       |     7|
+|10    |LUT2        |   174|
+|11    |LUT3        |   133|
+|12    |LUT4        |   215|
+|13    |LUT5        |   268|
+|14    |LUT6        |   744|
+|15    |MUXF7       |    13|
 |16    |RAM16X1D    |     2|
 |17    |RAM32X1D    |     2|
-|18    |FDRE        |   343|
+|18    |FDRE        |   344|
 |19    |FDSE        |   117|
 |20    |IBUF        |     6|
 |21    |OBUF        |    17|
 +------+------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:03:29 ; elapsed = 00:03:39 . Memory (MB): peak = 1691.320 ; gain = 743.418
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:33 ; elapsed = 00:01:38 . Memory (MB): peak = 1692.832 ; gain = 745.391
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:03:09 ; elapsed = 00:03:33 . Memory (MB): peak = 1691.320 ; gain = 648.598
-Synthesis Optimization Complete : Time (s): cpu = 00:03:29 ; elapsed = 00:03:40 . Memory (MB): peak = 1691.320 ; gain = 743.418
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:14 ; elapsed = 00:01:32 . Memory (MB): peak = 1692.832 ; gain = 648.301
+Synthesis Optimization Complete : Time (s): cpu = 00:01:33 ; elapsed = 00:01:38 . Memory (MB): peak = 1692.832 ; gain = 745.391
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.081 . Memory (MB): peak = 1695.262 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 47 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 1696.781 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 53 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1700.629 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1701.211 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 4 instances were transformed.
   RAM16X1D => RAM32X1D (RAMD32(x2)): 2 instances
   RAM32X1D => RAM32X1D (RAMD32(x2)): 2 instances
 
-Synth Design complete | Checksum: 7419fce7
+Synth Design complete | Checksum: de01c24d
 INFO: [Common 17-83] Releasing license: Synthesis
-55 Infos, 28 Warnings, 2 Critical Warnings and 0 Errors encountered.
+54 Infos, 32 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:03:45 ; elapsed = 00:03:58 . Memory (MB): peak = 1700.629 ; gain = 1173.730
-INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1700.629 ; gain = 0.000
+synth_design: Time (s): cpu = 00:01:43 ; elapsed = 00:01:51 . Memory (MB): peak = 1701.211 ; gain = 1174.988
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1701.211 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.runs/synth_1/gameTop.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file gameTop_utilization_synth.rpt -pb gameTop_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Apr 15 17:21:15 2026...
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 16 15:28:21 2026...
