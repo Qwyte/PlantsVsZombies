@@ -3,22 +3,22 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Wed Apr  8 18:18:08 2026
-# Process ID: 40568
-# Current directory: C:/Users/camer/Stuff/University/DSD/withNico/withNico.runs/blk_mem_gen_0_synth_1
+# Start of session at: Wed Apr 15 15:54:33 2026
+# Process ID: 67268
+# Current directory: C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.runs/blk_mem_gen_0_synth_1
 # Command line: vivado.exe -log blk_mem_gen_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source blk_mem_gen_0.tcl
-# Log file: C:/Users/camer/Stuff/University/DSD/withNico/withNico.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.vds
-# Journal file: C:/Users/camer/Stuff/University/DSD/withNico/withNico.runs/blk_mem_gen_0_synth_1\vivado.jou
-# Running On        :LAPTOP-07QTASJP
+# Log file: C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.vds
+# Journal file: C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.runs/blk_mem_gen_0_synth_1\vivado.jou
+# Running On        :Nicos-Laptop
 # Platform          :Windows Server 2016 or Windows 10
-# Operating System  :19045
-# Processor Detail  :Intel(R) Core(TM) i5-1035G7 CPU @ 1.20GHz
-# CPU Frequency     :1498 MHz
-# CPU Physical cores:4
-# CPU Logical cores :8
-# Host memory       :8155 MB
-# Swap memory       :24693 MB
-# Total Virtual     :32849 MB
-# Available Virtual :13090 MB
+# Operating System  :26200
+# Processor Detail  :12th Gen Intel(R) Core(TM) i7-1255U
+# CPU Frequency     :2611 MHz
+# CPU Physical cores:10
+# CPU Logical cores :12
+# Host memory       :16864 MB
+# Swap memory       :28318 MB
+# Total Virtual     :45183 MB
+# Available Virtual :3406 MB
 #-----------------------------------------------------------
 source blk_mem_gen_0.tcl -notrace

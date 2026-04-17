@@ -7,6 +7,7 @@ parser.add_argument('output1')
 parser.add_argument('output2')
 args = parser.parse_args()
 
+print(args)
 im = Image.open(args.filename).convert("RGBA")
 
 width, height = im.size

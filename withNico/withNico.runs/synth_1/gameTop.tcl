@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.runs/synth_1/gameTop.tcl"
+  variable script "C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.runs/synth_1/gameTop.tcl"
   variable category "vivado_synth"
 }
 
@@ -56,8 +56,9 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 2
+set_param chipscope.maxJobs 3
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
@@ -65,49 +66,65 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.cache/wt [current_project]
-set_property parent.project_path C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.cache/wt [current_project]
+set_property parent.project_path C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.cache/ip [current_project]
+set_property ip_output_repo c:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-add_files C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/lawntile.coe
-add_files C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/peashooter.coe
-add_files C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/peashootermask.coe
-add_files C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/sunflower.coe
-add_files C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/sunflowermask.coe
+add_files C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/lawntile.coe
+add_files C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/peashooter.coe
+add_files C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/peashootermask.coe
+add_files C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/sunflower.coe
+add_files C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/sunflowermask.coe
+add_files c:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/zombie1.coe
+add_files c:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/zombie1mask.coe
+add_files c:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/zombie2.coe
+add_files c:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/zombie2mask.coe
 read_verilog -library xil_defaultlib {
-  C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/calculateAddress.v
-  C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/cursor.v
-  C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/grid.v
-  C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/newDrawCon.v
-  C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/toolBar.v
-  C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/vga_out.v
-  C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/zombie_module.v
-  C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/gameTop.v
+  C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/calculateAddress.v
+  C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/cursor.v
+  C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/grid.v
+  C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/newDrawCon.v
+  C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/toolBar.v
+  C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/vga_out.v
+  C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/zombie_module.v
+  C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/gameTop.v
 }
-read_ip -quiet C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
-set_property used_in_implementation false [get_files -all c:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
+read_ip -quiet C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
 
-read_ip -quiet C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci
-set_property used_in_implementation false [get_files -all c:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1_ooc.xdc]
+read_ip -quiet C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci
+set_property used_in_implementation false [get_files -all c:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1_ooc.xdc]
 
-read_ip -quiet C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
-set_property used_in_implementation false [get_files -all c:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
+read_ip -quiet C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
 
-read_ip -quiet C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2.xci
-set_property used_in_implementation false [get_files -all c:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.gen/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2_ooc.xdc]
+read_ip -quiet C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2.xci
+set_property used_in_implementation false [get_files -all c:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.gen/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2_ooc.xdc]
 
-read_ip -quiet C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/ip/blk_mem_gen_4/blk_mem_gen_4.xci
-set_property used_in_implementation false [get_files -all c:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.gen/sources_1/ip/blk_mem_gen_4/blk_mem_gen_4_ooc.xdc]
+read_ip -quiet C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.srcs/sources_1/ip/blk_mem_gen_4/blk_mem_gen_4.xci
+set_property used_in_implementation false [get_files -all c:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.gen/sources_1/ip/blk_mem_gen_4/blk_mem_gen_4_ooc.xdc]
 
-read_ip -quiet C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3.xci
-set_property used_in_implementation false [get_files -all c:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.gen/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3_ooc.xdc]
+read_ip -quiet C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.srcs/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3.xci
+set_property used_in_implementation false [get_files -all c:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.gen/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3_ooc.xdc]
+
+read_ip -quiet c:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.srcs/sources_1/ip/blk_mem_gen_5/blk_mem_gen_5.xci
+set_property used_in_implementation false [get_files -all c:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.gen/sources_1/ip/blk_mem_gen_5/blk_mem_gen_5_ooc.xdc]
+
+read_ip -quiet c:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.srcs/sources_1/ip/blk_mem_gen_6/blk_mem_gen_6.xci
+set_property used_in_implementation false [get_files -all c:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.gen/sources_1/ip/blk_mem_gen_6/blk_mem_gen_6_ooc.xdc]
+
+read_ip -quiet c:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.srcs/sources_1/ip/blk_mem_gen_7/blk_mem_gen_7.xci
+set_property used_in_implementation false [get_files -all c:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.gen/sources_1/ip/blk_mem_gen_7/blk_mem_gen_7_ooc.xdc]
+
+read_ip -quiet c:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.srcs/sources_1/ip/blk_mem_gen_8/blk_mem_gen_8.xci
+set_property used_in_implementation false [get_files -all c:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.gen/sources_1/ip/blk_mem_gen_8/blk_mem_gen_8_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -118,12 +135,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/camer/Stuff/University/DSD/assignment/assignment.srcs/constrs_1/new/constraints.xdc
-set_property used_in_implementation false [get_files C:/Users/camer/Stuff/University/DSD/assignment/assignment.srcs/constrs_1/new/constraints.xdc]
+read_xdc {{C:/Users/Nico/Documents/University Work/ES3B2 Digital Systems Design/PVZ_WGrid/PVZ_WGrid.srcs/constrs_1/new/Nexys4DDR.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/Nico/Documents/University Work/ES3B2 Digital Systems Design/PVZ_WGrid/PVZ_WGrid.srcs/constrs_1/new/Nexys4DDR.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/utils_1/imports/synth_1/gameTop.dcp
+read_checkpoint -auto_incremental -incremental C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.srcs/utils_1/imports/synth_1/gameTop.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

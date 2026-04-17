@@ -1,15 +1,135 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="camer" Host="LAPTOP-07QTASJP" Pid="105840" HostCore="8" HostMemory="08155979776">
+    <Process Command="vivado.bat" Owner="Nico" Host="NICOS-LAPTOP" Pid="51296" HostCore="12" HostMemory="016864641024">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="camer" Host="LAPTOP-07QTASJP" Pid="103596" HostCore="8" HostMemory="08155979776">
+    <Process Command="vivado.bat" Owner="Nico" Host="NICOS-LAPTOP" Pid="47948" HostCore="12" HostMemory="016864641024">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="camer" Host="LAPTOP-07QTASJP" Pid="109152" HostCore="8" HostMemory="08155979776">
+    <Process Command="vivado.bat" Owner="Nico" Host="NICOS-LAPTOP" Pid="58616" HostCore="12" HostMemory="016864641024">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Nico" Host="NICOS-LAPTOP" Pid="63512" HostCore="12" HostMemory="016864641024">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Nico" Host="NICOS-LAPTOP" Pid="67920" HostCore="12" HostMemory="016864641024">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Nico" Host="NICOS-LAPTOP" Pid="8404" HostCore="12" HostMemory="016864641024">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Nico" Host="NICOS-LAPTOP" Pid="10872" HostCore="12" HostMemory="016864641024">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Nico" Host="NICOS-LAPTOP" Pid="46428" HostCore="12" HostMemory="016864641024">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Nico" Host="NICOS-LAPTOP" Pid="51120" HostCore="12" HostMemory="016864641024">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Nico" Host="NICOS-LAPTOP" Pid="27640" HostCore="12" HostMemory="016864641024">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Nico" Host="NICOS-LAPTOP" Pid="22064" HostCore="12" HostMemory="016864641024">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Nico" Host="NICOS-LAPTOP" Pid="50828" HostCore="12" HostMemory="016864641024">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Nico" Host="NICOS-LAPTOP" Pid="34540" HostCore="12" HostMemory="016864641024">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Nico" Host="NICOS-LAPTOP" Pid="8240" HostCore="12" HostMemory="016864641024">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Nico" Host="NICOS-LAPTOP" Pid="11888" HostCore="12" HostMemory="016864641024">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Nico" Host="NICOS-LAPTOP" Pid="29256" HostCore="12" HostMemory="016864641024">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Nico" Host="NICOS-LAPTOP" Pid="63416" HostCore="12" HostMemory="016864641024">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Nico" Host="NICOS-LAPTOP" Pid="25636" HostCore="12" HostMemory="016864641024">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Nico" Host="NICOS-LAPTOP" Pid="8736" HostCore="12" HostMemory="016864641024">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Nico" Host="NICOS-LAPTOP" Pid="22296" HostCore="12" HostMemory="016864641024">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Nico" Host="NICOS-LAPTOP" Pid="69280" HostCore="12" HostMemory="016864641024">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Nico" Host="NICOS-LAPTOP" Pid="51512" HostCore="12" HostMemory="016864641024">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Nico" Host="NICOS-LAPTOP" Pid="37268" HostCore="12" HostMemory="016864641024">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Nico" Host="NICOS-LAPTOP" Pid="34208" HostCore="12" HostMemory="016864641024">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Nico" Host="NICOS-LAPTOP" Pid="3004" HostCore="12" HostMemory="016864641024">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Nico" Host="NICOS-LAPTOP" Pid="42752" HostCore="12" HostMemory="016864641024">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Nico" Host="NICOS-LAPTOP" Pid="59780" HostCore="12" HostMemory="016864641024">
     </Process>
 </ProcessHandle>

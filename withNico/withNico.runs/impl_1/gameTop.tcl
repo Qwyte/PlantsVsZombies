@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.runs/impl_1/gameTop.tcl"
+  variable script "C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.runs/impl_1/gameTop.tcl"
   variable category "vivado_impl"
 }
 
@@ -97,6 +97,7 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -104,31 +105,35 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 2
+  set_param chipscope.maxJobs 3
   set_param xicom.use_bs_reader 1
-  set_param runs.launchOptions { -jobs 8  }
+  set_param runs.launchOptions { -jobs 12  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a100tcsg324-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.cache/wt [current_project]
-  set_property parent.project_path C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.xpr [current_project]
-  set_property ip_output_repo C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.cache/wt [current_project]
+  set_property parent.project_path C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.xpr [current_project]
+  set_property ip_output_repo C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.runs/synth_1/gameTop.dcp
-  read_ip -quiet C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
-  read_ip -quiet C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci
-  read_ip -quiet C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
-  read_ip -quiet C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2.xci
-  read_ip -quiet C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/ip/blk_mem_gen_4/blk_mem_gen_4.xci
-  read_ip -quiet C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3.xci
+  add_files -quiet C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.runs/synth_1/gameTop.dcp
+  read_ip -quiet C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+  read_ip -quiet C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci
+  read_ip -quiet C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+  read_ip -quiet C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2.xci
+  read_ip -quiet C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.srcs/sources_1/ip/blk_mem_gen_4/blk_mem_gen_4.xci
+  read_ip -quiet C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.srcs/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3.xci
+  read_ip -quiet c:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.srcs/sources_1/ip/blk_mem_gen_5/blk_mem_gen_5.xci
+  read_ip -quiet c:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.srcs/sources_1/ip/blk_mem_gen_6/blk_mem_gen_6.xci
+  read_ip -quiet c:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.srcs/sources_1/ip/blk_mem_gen_7/blk_mem_gen_7.xci
+  read_ip -quiet c:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.srcs/sources_1/ip/blk_mem_gen_8/blk_mem_gen_8.xci
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Users/camer/Stuff/University/DSD/assignment/assignment.srcs/constrs_1/new/constraints.xdc
+  read_xdc {{C:/Users/Nico/Documents/University Work/ES3B2 Digital Systems Design/PVZ_WGrid/PVZ_WGrid.srcs/constrs_1/new/Nexys4DDR.xdc}}
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }

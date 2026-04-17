@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Wed Apr 15 18:06:37 2026
+# Process ID: 63592
+# Current directory: C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent66524 C:\Users\Nico\Documents\GitHubActivities\PlantsVsZombies\withNico\withNico.xpr
+# Log file: C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/vivado.log
+# Journal file: C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico\vivado.jou
+# Running On        :Nicos-Laptop
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :26200
+# Processor Detail  :12th Gen Intel(R) Core(TM) i7-1255U
+# CPU Frequency     :2611 MHz
+# CPU Physical cores:10
+# CPU Logical cores :12
+# Host memory       :16864 MB
+# Swap memory       :31562 MB
+# Total Virtual     :48426 MB
+# Available Virtual :2692 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Nico/Documents/GitHubActivities/PlantsVsZombies/withNico/withNico.xpr
+update_compile_order -fileset sources_1
