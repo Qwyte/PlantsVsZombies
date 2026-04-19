@@ -1,0 +1,78 @@
+xilinx rtfpga
+rt::do_reinfer_area_combined 1
+INFO: [Synth 8-3886] merging instance 'bulletPositionY_reg[24][0]' (FDRE) to 'bulletPositionY_reg[24][10]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionYSync_reg[24][0]' (FDE) to 'bulletPositionYSync_reg[24][10]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionY_reg[24][1]' (FDRE) to 'bulletPositionY_reg[24][10]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionYSync_reg[24][1]' (FDE) to 'bulletPositionYSync_reg[24][10]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionY_reg[24][2]' (FDSE) to 'bulletPositionY_reg[24][3]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionYSync_reg[24][2]' (FDE) to 'bulletPositionYSync_reg[24][3]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionY_reg[24][3]' (FDSE) to 'bulletPositionY_reg[24][4]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionYSync_reg[24][3]' (FDE) to 'bulletPositionYSync_reg[24][4]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionY_reg[24][4]' (FDSE) to 'bulletPositionY_reg[24][5]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionYSync_reg[24][4]' (FDE) to 'bulletPositionYSync_reg[24][5]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionY_reg[24][5]' (FDSE) to 'bulletPositionY_reg[24][6]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionYSync_reg[24][5]' (FDE) to 'bulletPositionYSync_reg[24][6]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bulletPositionY_reg[24][10] )
+INFO: [Synth 8-3886] merging instance 'bulletPositionY_reg[52][0]' (FDRE) to 'bulletPositionY_reg[52][10]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionYSync_reg[52][0]' (FDE) to 'bulletPositionYSync_reg[52][10]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionY_reg[52][1]' (FDRE) to 'bulletPositionY_reg[52][10]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionYSync_reg[52][1]' (FDE) to 'bulletPositionYSync_reg[52][10]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bulletPositionY_reg[52][10] )
+INFO: [Synth 8-3886] merging instance 'bulletPositionYSync_reg[52][10]' (FDE) to 'bulletPositionYSync_reg[24][10]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionY_reg[2][0]' (FDRE) to 'bulletPositionY_reg[2][10]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionYSync_reg[2][0]' (FDE) to 'bulletPositionYSync_reg[2][10]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionY_reg[2][1]' (FDRE) to 'bulletPositionY_reg[2][10]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionYSync_reg[2][1]' (FDE) to 'bulletPositionYSync_reg[2][10]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bulletPositionY_reg[2][10] )
+INFO: [Synth 8-3886] merging instance 'bulletPositionYSync_reg[2][10]' (FDE) to 'bulletPositionYSync_reg[24][10]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionY_reg[34][0]' (FDRE) to 'bulletPositionY_reg[34][10]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionYSync_reg[34][0]' (FDE) to 'bulletPositionYSync_reg[34][10]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionY_reg[34][1]' (FDRE) to 'bulletPositionY_reg[34][10]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionYSync_reg[34][1]' (FDE) to 'bulletPositionYSync_reg[34][10]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionY_reg[34][2]' (FDSE) to 'bulletPositionY_reg[34][3]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionYSync_reg[34][2]' (FDE) to 'bulletPositionYSync_reg[34][3]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionY_reg[34][3]' (FDSE) to 'bulletPositionY_reg[34][4]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionYSync_reg[34][3]' (FDE) to 'bulletPositionYSync_reg[34][4]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionY_reg[34][4]' (FDSE) to 'bulletPositionY_reg[34][5]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionYSync_reg[34][4]' (FDE) to 'bulletPositionYSync_reg[34][5]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionY_reg[34][5]' (FDSE) to 'bulletPositionY_reg[34][6]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionYSync_reg[34][5]' (FDE) to 'bulletPositionYSync_reg[34][6]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bulletPositionY_reg[34][10] )
+INFO: [Synth 8-3886] merging instance 'bulletPositionYSync_reg[34][10]' (FDE) to 'bulletPositionYSync_reg[24][10]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionY_reg[45][0]' (FDRE) to 'bulletPositionY_reg[45][10]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionYSync_reg[45][0]' (FDE) to 'bulletPositionYSync_reg[45][10]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionY_reg[45][1]' (FDRE) to 'bulletPositionY_reg[45][10]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionYSync_reg[45][1]' (FDE) to 'bulletPositionYSync_reg[45][10]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bulletPositionY_reg[45][10] )
+INFO: [Synth 8-3886] merging instance 'bulletPositionYSync_reg[45][10]' (FDE) to 'bulletPositionYSync_reg[24][10]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionY_reg[28][0]' (FDRE) to 'bulletPositionY_reg[28][10]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionYSync_reg[28][0]' (FDE) to 'bulletPositionYSync_reg[28][10]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionY_reg[28][1]' (FDRE) to 'bulletPositionY_reg[28][10]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionYSync_reg[28][1]' (FDE) to 'bulletPositionYSync_reg[28][10]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bulletPositionY_reg[28][10] )
+INFO: [Synth 8-3886] merging instance 'bulletPositionYSync_reg[28][10]' (FDE) to 'bulletPositionYSync_reg[24][10]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionY_reg[43][0]' (FDRE) to 'bulletPositionY_reg[43][10]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionYSync_reg[43][0]' (FDE) to 'bulletPositionYSync_reg[43][10]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionY_reg[43][1]' (FDRE) to 'bulletPositionY_reg[43][10]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionYSync_reg[43][1]' (FDE) to 'bulletPositionYSync_reg[43][10]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionY_reg[43][2]' (FDSE) to 'bulletPositionY_reg[43][3]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionYSync_reg[43][2]' (FDE) to 'bulletPositionYSync_reg[43][3]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionY_reg[43][3]' (FDSE) to 'bulletPositionY_reg[43][4]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bulletPositionY_reg[43][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bulletPositionY_reg[15][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bulletPositionY_reg[31][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bulletPositionY_reg[18][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bulletPositionY_reg[58][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bulletPositionY_reg[0][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bulletPositionY_reg[47][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bulletPositionY_reg[7][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bulletPositionY_reg[42][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bulletPositionY_reg[6][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bulletPositionY_reg[55][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bulletPositionY_reg[10][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bulletPositionY_reg[29][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bulletPositionY_reg[51][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bulletPositionY_reg[11][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bulletPositionY_reg[44][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bulletPositionYSync_reg[24][10] )

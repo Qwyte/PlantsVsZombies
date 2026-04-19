@@ -22,11 +22,13 @@
 
 module newDrawCon(
 input clk,
-input toolBarEnable, cursorEnable, startMenu, validDisplay, greenButton, gridEnable, zombie_en,
+input toolBarEnable, cursorEnable, startMenu, validDisplay, 
+input greenButton, gridEnable, zombie_en, bulletEnable,
 input   [3:0] cursorRed, cursorGreen, cursorBlue,
 input   [3:0] toolRed, toolGreen, toolBlue,
 input   [3:0] gridRed, gridGreen, gridBlue,
 input   [3:0] zombRed, zombGreen, zombBlue,
+input [3:0] bulletRed, bulletGreen, bulletBlue,
 output reg [3:0] red, green, blue
     );
     
@@ -58,6 +60,12 @@ begin
         red <= toolRed;
         green <= toolGreen;
         blue <= toolBlue;
+    end
+    else if (bulletEnable)
+    begin
+        red <= bulletRed;
+        green <= bulletGreen;
+        blue <= bulletBlue;
     end
     else if (zombie_en)
     begin

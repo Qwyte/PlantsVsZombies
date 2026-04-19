@@ -1,0 +1,11 @@
+xilinx rtfpga
+rt::do_reinfer_area_combined 1
+INFO: [Synth 8-3886] merging instance 'bulletPositionXSync_reg[10][0]' (FDE) to 'bulletPositionXSync_reg[49][0]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionXSync_reg[19][0]' (FDE) to 'bulletPositionXSync_reg[49][0]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionXSync_reg[22][0]' (FDE) to 'bulletPositionXSync_reg[49][0]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionXSync_reg[25][0]' (FDE) to 'bulletPositionXSync_reg[49][0]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionXSync_reg[49][0]' (FDE) to 'bulletPositionXSync_reg[50][0]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionXSync_reg[50][0]' (FDE) to 'bulletPositionXSync_reg[55][0]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionXSync_reg[55][0]' (FDE) to 'bulletPositionXSync_reg[57][0]'
+INFO: [Synth 8-3886] merging instance 'bulletPositionXSync_reg[57][0]' (FDE) to 'bulletPositionXSync_reg[60][0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bulletPositionXSync_reg[60][0] )

@@ -40,67 +40,101 @@ parameter width = 1440;
 parameter widthOfGrid = 9; //9 blocks wide
 parameter heightOfGrid = 5; // 5 blocks tall
 reg [3:0] gridXValue;
-reg [3:0] gridYValue;
 reg inGrid = 0;
     reg [3:0] gridRegister [0:45];
     
     parameter Z_LIMIT=4'd4;
     parameter Y_LIMIT=4'd5;
-    reg [10:0] zomb_pos_x[Y_LIMIT:0][Z_LIMIT:0];
+    // extra two bits for animation cycles, 11 (10:0) for position
+    reg [12:0] zomb_entity[Y_LIMIT:0][Z_LIMIT:0];
+    reg [10:0] zomb_pos_x;
+    reg [18:0] zomb_sprite_pix[Y_LIMIT:0][Z_LIMIT:0];
+    
     reg [3:0] zomb_cnt[Y_LIMIT:0];
-
+    
+    parameter zom_coe_width_half = 48;
+    parameter zom_coe_height = 164;
+    
     
     reg [4:0] z_addr = 5'd0;
     reg [3:0] zomb_row = 3'b111;
     
-    always @(posedge clk) begin
-        //
-        zombie_en <= 1'b0;
-        if(curr_y > offsetVertical && curr_y <= 11'd128 + offsetVertical)begin
-            zomb_row <= 3'b000;
-        end else if (curr_y >  11'd128 + offsetVertical && curr_y <= 11'd256 + offsetVertical) begin
-            zomb_row <= 3'b001;
-        end else if (curr_y >  11'd256 + offsetVertical && curr_y <= 11'd384 + offsetVertical) begin
-            zomb_row <= 3'b010;
-        end else if (curr_y >  11'd384+ offsetVertical && curr_y <= 11'd512+ offsetVertical) begin
-            zomb_row <= 3'b011;
-        end else if (curr_y >  11'd512+ offsetVertical && curr_y <= 11'd640+ offsetVertical) begin
-            zomb_row <= 3'b100;
-        end else begin
-            zomb_row <=3'b111;
-        end
-        if(curr_x == 11'd1)begin
-            z_addr <= 5'd0;
-        end
-        if(zomb_row != 3'b111)begin
-            if(curr_x >= zomb_pos_x[zomb_row][z_addr] - 11'd32 && curr_x <= zomb_pos_x[zomb_row][z_addr] + 11'd32 )begin
-                zomb_r <= 4'b1111;
-                zomb_g <= 4'b0000;
-                zomb_b <= 4'b1111;
-                zombie_en <= 1'b1;
-            end else begin
-                zomb_r <= 4'b0000;
-                zomb_g <= 4'b0000;
-                zomb_b <= 4'b0000;
-            end
-            if(curr_x == zomb_pos_x[zomb_row][z_addr] + 11'd33 && zomb_pos_x[zomb_row][z_addr] != 11'd0)begin
-                z_addr <= z_addr +1'b1;
-            end
-        end
-    end
+    
+    wire[11:0] zomRom1;
+    wire[11:0] zomRom2;
+    
+    wire zomRom1Mask;
+    wire zomRom2Mask;
+    reg [18:0] address;
     reg [5:0]i;
     reg [5:0]o_o;
     reg [5:0]y;
+    
+    always @(posedge clk) 
+        begin
+        //
+        // Gonna need to scrap all of this I think, and replace with if statements in the 
+        // for loop.
+        // if :: y*128 < zomb_pos_y <196 + (y+1)*128
+        // note how (y+2)*128 < (y+1)*128 + 196, hence overlap
+        zombie_en <=1'b0;
+        for(y=0; y<Y_LIMIT;y=y+1)
+            begin
+            for(z_addr=0;z_addr<Z_LIMIT; z_addr=z_addr+1)
+                begin
+                    if(curr_x >= zomb_entity[y][z_addr][10:0] - zom_coe_width_half && curr_x < zomb_entity[y][z_addr][10:0] + zom_coe_width_half
+                    && curr_y > (y+1)*128 + offsetVertical - zom_coe_height && curr_y <= (y+1)*128 + offsetVertical)
+                    begin
+                        address <= zomb_sprite_pix[y][z_addr];
+                        if(zomRom1Mask==1'b1 && zomb_entity[y][z_addr][12:11] == 2'b00)begin
+                            zombie_en <=1'b1;
+                        end 
+                        else if (zomRom2Mask==1'b1 && zomb_entity[y][z_addr][12:11] == 2'b01)begin
+                            zombie_en <=1'b1;
+                        end
+                        zomb_sprite_pix[y][z_addr] <= zomb_sprite_pix[y][z_addr]+1;
+                    end
+                    if (curr_x==11'd1439 && curr_y==11'd899)begin
+                        zomb_sprite_pix[y][z_addr] <= 0;
+                    end
+                end
+            end
+            zomb_r <= zomRom1[11:8]; // 4'b1111
+            zomb_g <= zomRom1[7:4];  // 4'b0000
+            zomb_b <= zomRom1[3:0];  // 4'b1111
+        end
+    
     reg [3:0] zomb_new_row=4'b0111;
     reg [3:0] rotate_index[Y_LIMIT:0][Z_LIMIT:0];
     reg [12:0] random;
-    
     reg [10:0] zomb_pos_x_temp;
-    reg [10:0] zomb_pos_y_temp;
-    reg [5:0] zomb_grid_addr;
-    //calculateAddress zomb_grid_addr_module (
-    //.pixelX(zomb_pos_x_temp), .pixelY(zomb_pos_y_temp), .gridPosition(zomb_grid_addr));
+    reg [5:0]  zomb_grid_addr;
+    
+    blk_mem_gen_5 ZomRomFrame1 (
+  .clka(clk),    // input wire clka
+  .addra(address),  // input wire [13 : 0] addra
+  .douta(zomRom1)  // output wire [11 : 0] douta
+);
+    blk_mem_gen_6 ZomRomFrame1Mask (
+  .clka(clk),    // input wire clka
+  .addra(address),  // input wire [13 : 0] addra
+  .douta(zomRom1Mask)  // output wire [11 : 0] douta
+);
+
+blk_mem_gen_7 ZomRomFrame2 (
+  .clka(clk),    // input wire clka
+  .addra(address),  // input wire [13 : 0] addra
+  .douta(zomRom2)  // output wire [11 : 0] douta
+);
+
+blk_mem_gen_8 ZomRomFrame2Mask (
+  .clka(clk),    // input wire clka
+  .addra(address),  // input wire [13 : 0] addra
+  .douta(zomRom2Mask)  // output wire [11 : 0] douta
+);
+    
     ////////////////////////////////// UPDATE POSITION
+    reg [8:0] clockDividerCounter=8'd0;
     always @(posedge clk_60) 
     begin
         LED_2<=1'b0;
@@ -110,28 +144,13 @@ reg inGrid = 0;
             for (i=0; i<Z_LIMIT; i=i+1)
                 begin
                     rotate_index[y][i] <= 4'd0;
-                    zomb_pos_x_temp = zomb_pos_x[y][i]-11'd33;
-                    zomb_pos_y_temp = (y*128)+offsetVertical;
-                    inGrid = 0;
-                    gridXValue = 0;
-                    gridYValue = 0;
-                        if ((zomb_pos_x_temp >= offsetFromHouse) && (zomb_pos_y_temp >= offsetVertical) && (zomb_pos_y_temp <= (height - offsetVertical)))
-                        begin
-                            inGrid = 1;
-                            gridXValue = ((zomb_pos_x_temp - offsetFromHouse)>> 7) + 1; //offset so gridPosition = 0 only if not in grid
-                                if (gridXValue > widthOfGrid)
-                                inGrid = 0;
-                            gridYValue = (zomb_pos_y_temp-offsetVertical) >> 7;
-                        end
-                        else
-                            inGrid = 0;
-                   
-                    
-                    zomb_grid_addr = gridYValue*widthOfGrid + gridXValue;
-                    if(zomb_pos_x[y][i] > 11'd128 && gridRegister[zomb_grid_addr]<2)begin
-                        zomb_pos_x[y][i] <= zomb_pos_x[y][i] - 11'd1;
+                    zomb_pos_x_temp = zomb_entity[y][i][10:0]-11'd33;
+                    gridXValue = ((zomb_pos_x_temp - offsetFromHouse)>> 7) + 1;
+                    zomb_grid_addr = y*widthOfGrid + gridXValue;
+                    if(zomb_entity[y][i][10:0] > 11'd128 && gridRegister[zomb_grid_addr]<2)begin
+                        zomb_entity[y][i][10:0] <= zomb_entity[y][i][10:0] - 11'd1;
                         zomb_cnt[y] <=i+1;
-                    end else if (zomb_pos_x[y][i] == 11'd128)begin
+                    end else if (zomb_entity[y][i][10:0] == 11'd128)begin
                         rotate_index[y][i] <= i+1;
                     end
                 end
@@ -144,12 +163,12 @@ reg inGrid = 0;
                             begin
                                 if(o_o+rotate_index[y][i] <= Z_LIMIT)
                                     begin
-                                        zomb_pos_x[y][o_o+rotate_index[y][i]-1] <= zomb_pos_x[y][o_o+rotate_index[y][i]];
-                                        
+                                        zomb_entity[y][o_o+rotate_index[y][i]-1] <= zomb_entity[y][o_o+rotate_index[y][i]];
                                     end
                             end
                         rotate_index[y][i] <=0;
-                        zomb_pos_x[y][Z_LIMIT] <= 11'd0;
+                        zomb_entity[y][Z_LIMIT][10:0] <= 11'd0;
+                        zomb_sprite_pix[y][Z_LIMIT] <= 11'd0;
                         zomb_cnt[y] <=zomb_cnt[y]-1;
                     end   
                 end
@@ -158,15 +177,23 @@ reg inGrid = 0;
         if(zomb_gen==1'b1) 
             begin
                 zomb_new_row <= random %3'd5;
-                zomb_pos_x[zomb_new_row][zomb_cnt[zomb_new_row]] <= 11'd850;
+                zomb_entity[zomb_new_row][zomb_cnt[zomb_new_row]][10:0] <= 11'd850;
                 random <= random +1;
             end
         if(updatePlant != 0)begin
             LED_2<=1'b1;
             gridRegister[updateAddr] <=updatePlant;
         end
+        
+        if(clockDividerCounter==8'd60)begin
+            clockDividerCounter <= 0;
+            zomb_entity[y][z_addr][12:11] <= ~zomb_entity[y][z_addr][12:11];
+        end else begin
+            clockDividerCounter <= clockDividerCounter +1;
+        end
     end
     
     
+
     //LFSR(.clock(clk_60), .reset(rst), .rnd(random));
 endmodule

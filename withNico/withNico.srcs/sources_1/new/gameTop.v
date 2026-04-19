@@ -186,39 +186,39 @@ assign startMenu = (changeToGame) ? 0:1;
 
 
 
-reg zomb_gen=1'b0;
-    reg  switch_state=1'b0;
-    always@(posedge gameClk)
-    begin
-        if(switch_state != SW_0 && SW_0 == 1'b1) begin
-            zomb_gen <= 1'b1;
-            switch_state <= SW_0;
-            LED_0 <= 1;
-        end else begin
-            zomb_gen <= 1'b0;
-            LED_0<= 0;
-            switch_state <= SW_0;
-        end
-    end
+//reg zomb_gen=1'b0;
+//    reg  switch_state=1'b0;
+//    always@(posedge gameClk)
+//    begin
+//        if(switch_state != SW_0 && SW_0 == 1'b1) begin
+//            zomb_gen <= 1'b1;
+//            switch_state <= SW_0;
+//            LED_0 <= 1;
+//        end else begin
+//            zomb_gen <= 1'b0;
+//            LED_0<= 0;
+//            switch_state <= SW_0;
+//        end
+//    end
 
-    wire [3:0] zomb_r;
-    wire [3:0] zomb_g;
-    wire [3:0] zomb_b;
-    wire zombie_en;
+//    wire [3:0] zomb_r;
+//    wire [3:0] zomb_g;
+//    wire [3:0] zomb_b;
+//    wire zombie_en;
     reg [3:0] updatePlant;
     reg [5:0] updateAddr;
-    assign LED_1 = zombie_en;
+//    assign LED_1 = zombie_en;
     
-    zombie_module (
-    .clk_60(gameClk), .clk(pixelClk),
-    .curr_x(currentX), .curr_y(currentY),
-    //
-    .zomb_r(zomb_r), .zomb_g(zomb_g), .zomb_b(zomb_b), .zomb_gen(zomb_gen), .LED_2(LED_2),
-    .zombie_en(zombie_en), .updatePlant(updatePlant), .updateAddr(updateAddr),
+//    zombie_module (
+//    .clk_60(gameClk), .clk(pixelClk),
+//    .curr_x(currentX), .curr_y(currentY),
+//    //
+//    .zomb_r(zomb_r), .zomb_g(zomb_g), .zomb_b(zomb_b), .zomb_gen(zomb_gen), .LED_2(LED_2),
+//    .zombie_en(zombie_en), .updatePlant(updatePlant), .updateAddr(updateAddr),
     
-    .offsetVertical(offsetVertical)
-    //
-    );
+//    .offsetVertical(offsetVertical)
+//    //
+//    );
 
 
 
@@ -255,6 +255,17 @@ grid grid(
 .gridContent(gridContent), .gridPosition(safeIndex),
 .red(gridRed), .green(gridGreen), .blue(gridBlue), .gridEnable(gridEnable));
 
+wire bulletEnable;
+wire [3:0] bulletRed, bulletGreen, bulletBlue;
+bullet bullet(
+.clk(pixelClk),
+.HzClk60(gameClk),
+.currentX(currentX), .currentY(currentY),
+.updatePlant(updatePlant), .updateAddr(updateAddr),
+.red(bulletRed), .green(bulletGreen), .blue(bulletBlue),
+.bulletEnable(bulletEnable));
+
+
 wire greenButton = currentX > 720-50 && currentX < 720 + 50 && currentY < 450 + 30 && currentY > 450 - 30;
 newDrawCon newDrawCon(
 .clk(pixelClk),
@@ -264,9 +275,9 @@ newDrawCon newDrawCon(
 .cursorRed(cursorRed), .cursorGreen(cursorGreen), .cursorBlue(cursorBlue),
 .toolRed(toolRed), .toolGreen(toolGreen), .toolBlue(toolBlue),
 .gridRed(gridRed), .gridGreen(gridGreen), .gridBlue(gridBlue), .gridEnable(gridEnable),
-.zombRed(zomb_r), .zombGreen(zomb_g), .zombBlue(zomb_b), .zombie_en(zombie_en),
+//.zombRed(zomb_r), .zombGreen(zomb_g), .zombBlue(zomb_b), .zombie_en(zombie_en),
+.bulletRed(bulletRed), .bulletGreen(bulletGreen), .bulletBlue(blue), .bulletEnable(bulletEnable),
 .red(drawRed), .green(drawGreen), .blue(drawBlue));
-
 
 
 
@@ -274,7 +285,7 @@ newDrawCon newDrawCon(
 vga_out vga_out(
 //inputs
 .clk(pixelClk), 
-.inRed(drawRed), 
+.inRed(drawRed),
 .inGreen(drawGreen), 
 .inBlue(drawBlue),
 //outputs

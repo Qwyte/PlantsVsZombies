@@ -79,14 +79,18 @@ add_files C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/peashooter.co
 add_files C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/peashootermask.coe
 add_files C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/sunflower.coe
 add_files C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/sunflowermask.coe
+add_files C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/zombie1.coe
+add_files C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/zombie2.coe
+add_files C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/zombie1mask.coe
+add_files C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/zombie2mask.coe
 read_verilog -library xil_defaultlib {
+  C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/bullet.v
   C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/calculateAddress.v
   C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/cursor.v
   C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/grid.v
   C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/newDrawCon.v
   C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/toolBar.v
   C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/vga_out.v
-  C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/zombie_module.v
   C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/new/gameTop.v
 }
 read_ip -quiet C:/Users/camer/Documents/GitHub/PlantsVsZombies/withNico/withNico.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
